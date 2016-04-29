@@ -4,7 +4,7 @@
 #
 Name     : webcolors
 Version  : 1.5
-Release  : 3
+Release  : 4
 URL      : https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz
 Source0  : https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz
 Summary  : A library for working with color names and color value formats defined by the HTML and CSS specifications for use in documents on the Web.
