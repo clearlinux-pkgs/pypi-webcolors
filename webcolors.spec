@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x2D9266A6808FE067 (james@b-list.org)
 #
 Name     : webcolors
-Version  : 1.5
-Release  : 10
-URL      : https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz
-Source0  : https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz
-Source99 : https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz.asc
+Version  : 1.7
+Release  : 11
+URL      : http://pypi.debian.net/webcolors/webcolors-1.7.tar.gz
+Source0  : http://pypi.debian.net/webcolors/webcolors-1.7.tar.gz
+Source99 : http://pypi.debian.net/webcolors/webcolors-1.7.tar.gz.asc
 Summary  : A library for working with color names and color value formats defined by the HTML and CSS specifications for use in documents on the Web.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -21,8 +21,8 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 
 %description
-``webcolors`` is a simple Python module for working with HTML/CSS
-color definitions.
+.. image:: https://travis-ci.org/ubernostrum/webcolors.svg?branch=master
+:target: https://travis-ci.org/ubernostrum/webcolors
 
 %package python
 Summary: python components for the webcolors package.
@@ -33,16 +33,16 @@ python components for the webcolors package.
 
 
 %prep
-%setup -q -n webcolors-1.5
+%setup -q -n webcolors-1.7
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484583918
+export SOURCE_DATE_EPOCH=1488473600
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1484583918
+export SOURCE_DATE_EPOCH=1488473600
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

@@ -1,5 +1,5 @@
 PKG_NAME := webcolors
-URL := https://pypi.python.org/packages/source/w/webcolors/webcolors-1.5.tar.gz
+URL := http://pypi.debian.net/webcolors/webcolors-1.7.tar.gz
 
 
 include ../common/Makefile.common
