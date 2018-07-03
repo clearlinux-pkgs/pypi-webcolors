@@ -6,7 +6,7 @@
 #
 Name     : webcolors
 Version  : 1.8.1
-Release  : 31
+Release  : 32
 URL      : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz
 Source0  : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz
 Source99 : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz.asc
