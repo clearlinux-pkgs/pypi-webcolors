@@ -6,36 +6,21 @@
 #
 Name     : webcolors
 Version  : 1.8.1
-Release  : 36
+Release  : 37
 URL      : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz
 Source0  : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz
 Source99 : http://pypi.debian.net/webcolors/webcolors-1.8.1.tar.gz.asc
 Summary  : A library for working with color names and color values formats defined by HTML and CSS.
 Group    : Development/Tools
 License  : BSD-3-Clause
-Requires: webcolors-python3
-Requires: webcolors-license
-Requires: webcolors-python
-BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python-core
-BuildRequires : python3-core
-BuildRequires : python3-dev
-BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
+Requires: webcolors-license = %{version}-%{release}
+Requires: webcolors-python = %{version}-%{release}
+Requires: webcolors-python3 = %{version}-%{release}
+BuildRequires : buildreq-distutils3
 
 %description
 .. image:: https://travis-ci.org/ubernostrum/webcolors.svg?branch=master
 :target: https://travis-ci.org/ubernostrum/webcolors
-
-%package legacypython
-Summary: legacypython components for the webcolors package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the webcolors package.
-
 
 %package license
 Summary: license components for the webcolors package.
@@ -48,7 +33,7 @@ license components for the webcolors package.
 %package python
 Summary: python components for the webcolors package.
 Group: Default
-Requires: webcolors-python3
+Requires: webcolors-python3 = %{version}-%{release}
 
 %description python
 python components for the webcolors package.
@@ -71,17 +56,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530378126
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554330017
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %install
-export SOURCE_DATE_EPOCH=1530378126
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/webcolors
-cp LICENSE %{buildroot}/usr/share/doc/webcolors/LICENSE
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+mkdir -p %{buildroot}/usr/share/package-licenses/webcolors
+cp LICENSE %{buildroot}/usr/share/package-licenses/webcolors/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -89,13 +73,9 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
-
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/webcolors/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/webcolors/LICENSE
 
 %files python
 %defattr(-,root,root,-)
