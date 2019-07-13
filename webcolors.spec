@@ -6,7 +6,7 @@
 #
 Name     : webcolors
 Version  : 1.9.1
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/70/8b/cf0ae06cf420718ef88080eca4ea971612831c99bfc43ebea826be6b52cb/webcolors-1.9.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/70/8b/cf0ae06cf420718ef88080eca4ea971612831c99bfc43ebea826be6b52cb/webcolors-1.9.1.tar.gz
 Source99 : https://files.pythonhosted.org/packages/70/8b/cf0ae06cf420718ef88080eca4ea971612831c99bfc43ebea826be6b52cb/webcolors-1.9.1.tar.gz.asc
