@@ -1,5 +1,5 @@
 PKG_NAME := webcolors
-URL = https://files.pythonhosted.org/packages/70/8b/cf0ae06cf420718ef88080eca4ea971612831c99bfc43ebea826be6b52cb/webcolors-1.9.1.tar.gz
+URL = https://files.pythonhosted.org/packages/9f/e0/d3838acaa6f287726d30f31acc4aba5dd515cfb495be2f4e62653feed0a1/webcolors-1.10.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
