@@ -6,7 +6,7 @@
 #
 Name     : webcolors
 Version  : 1.11.1
-Release  : 49
+Release  : 50
 URL      : https://files.pythonhosted.org/packages/a7/df/b97bf02a97bbd5ed874fec7c5418bf0dd51e8d042ac46bbf2bf5983e89fd/webcolors-1.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a7/df/b97bf02a97bbd5ed874fec7c5418bf0dd51e8d042ac46bbf2bf5983e89fd/webcolors-1.11.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/a7/df/b97bf02a97bbd5ed874fec7c5418bf0dd51e8d042ac46bbf2bf5983e89fd/webcolors-1.11.1.tar.gz.asc
@@ -24,46 +24,8 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-.. -*-restructuredtext-*-
-
 .. image:: https://travis-ci.org/ubernostrum/webcolors.svg?branch=master
-    :target: https://travis-ci.org/ubernostrum/webcolors
-
-``webcolors`` is a module for working with HTML/CSS color definitions.
-
-Support is included for normalizing and converting between the
-following formats (RGB colorspace only; conversion to/from HSL can be
-handled by the ``colorsys`` module in the Python standard library):
-
-* Specification-defined color names
-
-* Six-digit hexadecimal
-
-* Three-digit hexadecimal
-
-* Integer ``rgb()`` triplet
-
-* Percentage ``rgb()`` triplet
-
-For example:
-
-.. code-block:: python
-
-    >>> import webcolors
-    >>> webcolors.hex_to_name(u'#daa520')
-    u'goldenrod'
-
-Implementations are also provided for the HTML5 color parsing and
-serialization algorithms. For example, parsing the infamous
-"chucknorris" string into an rgb() triplet:
-
-.. code-block:: python
-
-    >>> import webcolors
-    >>> webcolors.html5_parse_legacy_color(u'chucknorris')
-    HTML5SimpleColor(red=192, green=0, blue=0)
-
-Full documentation is `available online <https://webcolors.readthedocs.io/>`_.
+:target: https://travis-ci.org/ubernostrum/webcolors
 
 %package license
 Summary: license components for the webcolors package.
@@ -101,12 +63,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582903727
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603407486
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
