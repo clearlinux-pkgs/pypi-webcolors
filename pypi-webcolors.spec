@@ -7,7 +7,7 @@
 #
 Name     : pypi-webcolors
 Version  : 24.11.1
-Release  : 82
+Release  : 83
 URL      : https://files.pythonhosted.org/packages/7b/29/061ec845fb58521848f3739e466efd8250b4b7b98c1b6c5bf4d40b419b7e/webcolors-24.11.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7b/29/061ec845fb58521848f3739e466efd8250b4b7b98c1b6c5bf4d40b419b7e/webcolors-24.11.1.tar.gz
 Summary  : A library for working with the color formats defined by HTML and CSS.
